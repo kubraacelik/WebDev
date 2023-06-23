@@ -11,7 +11,7 @@ namespace DataAccess.Concrete.EntityFramework
         //Eşleşecek olan database'i tanımladık
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=BookStore;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=BookStore;Trusted_Connection=true");
         }
         public DbSet<Book> Books { get; set; }
     }

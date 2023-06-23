@@ -23,7 +23,11 @@ namespace Business.Concrete
             {
                 _bookDal.Add(book);
             }
-            throw new Exception("Bu kitap ismi zaten mevcut");
+            else
+            {
+                throw new Exception("Bu kitap ismi zaten mevcut");
+            }
+            
         }
 
         public void Delete(Book book)
@@ -31,6 +35,8 @@ namespace Business.Concrete
             _bookDal.Delete(book);
         }
 
+
+        //List<> olursa ToList() kullanılır.
         public List<Book> GetAll()
         {
             return _bookDal.GetList().ToList();
